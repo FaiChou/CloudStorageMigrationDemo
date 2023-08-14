@@ -8,63 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var text: String = ""
-    @State private var showAlert1: Bool = false
-    @State private var showAlert2: Bool = false
+    @CloudStorage(K1) private var value1: String = "default"
+    @CloudStorage(K2) private var value2: Bool = false
+    @CloudStorage(K3) private var value3: SubtitleFontSize = .large
     var body: some View {
         VStack {
-            TextField("Value", text: $text)
+            TextField("k1", text: $value1)
                 .padding()
-            Button("save") {
-                save()
-            }
-            .padding()
-            Button("restore") {
-                restore()
-            }
-            .padding()
-            Button("resotre2") {
-                if let x = NSUbiquitousKeyValueStore.default.string(forKey: "nonoooo") {
-                    print(x)
+            Toggle("k2", isOn: $value2)
+                .padding()
+            ForEach(SubtitleFontSize.allCases) { size in
+                if size.rawValue == value3.rawValue {
+                    Button("[已选择]: \(size.rawValue)") {
+                        value3 = size
+                    }
                 } else {
-                    print("novalue")
+                    Button(size.rawValue) {
+                        value3 = size
+                    }
                 }
             }
-        }
-        .alert(
-            "Save Failed",
-            isPresented: $showAlert1
-        ) {
-            Button("OK") {
-                // Handle the retry action.
-            }
-        }
-        .alert(
-            "Save Success",
-            isPresented: $showAlert2
-        ) {
-            Button("OK") {
-                // Handle the retry action.
-            }
-        }
-        .padding()
-    }
-    private func save() {
-        if text.isEmpty {
-            showAlert1 = true
-            return
-        }
-        let store = NSUbiquitousKeyValueStore.default
-        store.set(text, forKey: "k1")
-        store.synchronize()
-        showAlert2 = true
-    }
-    private func restore() {
-        let store = NSUbiquitousKeyValueStore.default
-        if let value = store.string(forKey: "k1") {
-            text = value
-        } else {
-            print("nothing to restore")
+            .padding()
         }
     }
 }

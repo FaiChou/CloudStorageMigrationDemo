@@ -11,6 +11,10 @@
 		4D823FD52A88C300004CE1BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D823FD42A88C300004CE1BC /* ContentView.swift */; };
 		4D823FD72A88C302004CE1BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D823FD62A88C302004CE1BC /* Assets.xcassets */; };
 		4D823FDA2A88C302004CE1BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D823FD92A88C302004CE1BC /* Preview Assets.xcassets */; };
+		4D823FE42A8A4F5F004CE1BC /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D823FE32A8A4F5F004CE1BC /* Types.swift */; };
+		4D823FE62A8A4FC9004CE1BC /* CloudStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D823FE52A8A4FC9004CE1BC /* CloudStorage.swift */; };
+		4D823FE82A8A4FDA004CE1BC /* CloudStorageSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D823FE72A8A4FDA004CE1BC /* CloudStorageSync.swift */; };
+		4D823FEA2A8A5185004CE1BC /* CloudStorageMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D823FE92A8A5185004CE1BC /* CloudStorageMigration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		4D823FD62A88C302004CE1BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D823FD92A88C302004CE1BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D823FE02A88C30F004CE1BC /* CloudStorageDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudStorageDemo.entitlements; sourceTree = "<group>"; };
+		4D823FE32A8A4F5F004CE1BC /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		4D823FE52A8A4FC9004CE1BC /* CloudStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudStorage.swift; sourceTree = "<group>"; };
+		4D823FE72A8A4FDA004CE1BC /* CloudStorageSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudStorageSync.swift; sourceTree = "<group>"; };
+		4D823FE92A8A5185004CE1BC /* CloudStorageMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudStorageMigration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,10 @@
 				4D823FE02A88C30F004CE1BC /* CloudStorageDemo.entitlements */,
 				4D823FD22A88C300004CE1BC /* CloudStorageDemoApp.swift */,
 				4D823FD42A88C300004CE1BC /* ContentView.swift */,
+				4D823FE92A8A5185004CE1BC /* CloudStorageMigration.swift */,
+				4D823FE52A8A4FC9004CE1BC /* CloudStorage.swift */,
+				4D823FE72A8A4FDA004CE1BC /* CloudStorageSync.swift */,
+				4D823FE32A8A4F5F004CE1BC /* Types.swift */,
 				4D823FD62A88C302004CE1BC /* Assets.xcassets */,
 				4D823FD82A88C302004CE1BC /* Preview Content */,
 			);
@@ -140,7 +152,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D823FD52A88C300004CE1BC /* ContentView.swift in Sources */,
+				4D823FE82A8A4FDA004CE1BC /* CloudStorageSync.swift in Sources */,
+				4D823FE62A8A4FC9004CE1BC /* CloudStorage.swift in Sources */,
 				4D823FD32A88C300004CE1BC /* CloudStorageDemoApp.swift in Sources */,
+				4D823FEA2A8A5185004CE1BC /* CloudStorageMigration.swift in Sources */,
+				4D823FE42A8A4F5F004CE1BC /* Types.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
